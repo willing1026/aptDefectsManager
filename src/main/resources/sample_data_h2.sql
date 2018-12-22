@@ -1,0 +1,10 @@
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용1','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용2','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용3','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용4','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용5','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용6','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용7','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용8','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용9','방1','amd@google.com');
+insert into defects(created_date, modified_date, apt_cd, content, room_cd, user_id) values (now(),now(),'APT-203-432','하자내용10','방1','amd@google.com');
