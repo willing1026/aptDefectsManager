@@ -35,7 +35,7 @@ public class DefectsPostServiceTest {
 		
 		assertThat(defects.getAptCd()).isEqualTo(dto.getAptCd());
 		assertThat(defects.getContent()).isEqualTo(dto.getContent());
-		assertThat(defects.getRoomCd()).isEqualTo(dto.getRoomCd());
+		assertThat(defects.getRoomType()).isEqualTo(dto.getRoomType());
 		assertThat(defects.getUserId()).isEqualTo(dto.getUserId());
 		
 		

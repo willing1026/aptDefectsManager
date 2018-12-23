@@ -15,7 +15,7 @@ public class DefectsResponseDto {
 	
 	private String userId;
 	private String aptCd;
-	private String roomCd;
+	private String roomType;
 	private String content;
 	
 	private String createdDate;
@@ -26,7 +26,7 @@ public class DefectsResponseDto {
 		this.no = entity.getNo();
 		this.userId = entity.getUserId();
 		this.aptCd = entity.getAptCd();
-		this.roomCd = entity.getRoomCd();
+		this.roomType = entity.getRoomType();
 		this.content = entity.getContent();
 		this.createdDate = toStringDateTime(entity.getCreatedDate());
 		this.modifiedDate = toStringDateTime(entity.getModifiedDate());

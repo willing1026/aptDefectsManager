@@ -14,23 +14,23 @@ public class DefectsRequestDto {
 
 	private String userId;
 	private String aptCd;
-	private String roomCd;
+	private String roomType;
 	private String content;
 	
 	public Defects toEntity() {
 		return Defects.builder()
 					.userId(userId)
 					.aptCd(aptCd)
-					.roomCd(roomCd)
+					.roomType(roomType)
 					.content(content)
 					.build();
 	}
 	
 	@Builder
-	public DefectsRequestDto(String userId, String aptCd, String roomCd, String content) {
+	public DefectsRequestDto(String userId, String aptCd, String roomType, String content) {
 		this.userId = userId;
 		this.aptCd = aptCd;
-		this.roomCd = roomCd;
+		this.roomType = roomType;
 		this.content = content;
 	}
 }
