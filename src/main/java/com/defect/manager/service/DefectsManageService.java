@@ -23,6 +23,10 @@ public class DefectsManageService {
 		return defectsRepository.findAll();
 	}
 	
+	public Defects getDefectsByNo(Long no) {
+		return defectsRepository.findByNo(no);
+	}
+	
 	//post
 	@Transactional
 	public Long postDefects(DefectsRequestDto dto) {
