@@ -16,6 +16,10 @@ let main = {
             main.update();
         });
         
+        $('.btn-delete').on('click', function() {
+            _this.delete(event);
+        })
+        
         /*내용 수정 modal창*/
         /*$('#updateDefectsModal').on('show.bs.modal', function(event) {
             _this.updateModal(event);
@@ -94,6 +98,35 @@ let main = {
         }).always(function() {
             location.reload();
         });
+    },
+    
+    delete: function(event) {
+        let button2 = $(event.target);
+        let tr2 = button2.parent().parent();
+        let td2 = tr2.children();
+        let no2 = td2.eq(0).text();
+        let url2 = "/defects/"+no2;
+
+        
+        console.log("delete no : " + no2);
+        
+        $.ajax({
+            url: url2,
+            type: 'DELETE',
+            dataType: 'text',
+            contentType: 'application/json; charset=utf-8',
+            data: no2,
+            success: function() {
+                alert('성공');
+            },
+            error: function(e) {
+                alert('오류');
+            }
+        }).always(function() {
+            location.reload();
+        });
+        
+        
     }
     
 
