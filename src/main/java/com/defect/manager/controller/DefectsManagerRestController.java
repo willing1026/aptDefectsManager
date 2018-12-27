@@ -41,14 +41,14 @@ public class DefectsManagerRestController {
 	
 	private DefectsManageService defectsManageService;
 //
-	//get - 하자목록 1건 불러오기
-	@GetMapping("/defects/{no}")
-	public @ResponseBody Defects getDefectsList(@PathVariable Long no) {
-		/**
-		 * JSON객체로 return하기  : https://blog.hanumoka.net/2018/04/29/spring-20180429-spring-controller-return-json/
-		 */
-		return defectsManageService.getDefectsByNo(no);
-	}
+//get - 하자목록 1건 불러오기 // 사용할 필요 없어짐
+//	@GetMapping("/defects/{no}")
+//	public @ResponseBody Defects getDefectsList(@PathVariable Long no) {
+//		/**
+//		 * JSON객체로 return하기  : https://blog.hanumoka.net/2018/04/29/spring-20180429-spring-controller-return-json/
+//		 */
+//		return defectsManageService.getDefectsByNo(no);
+//	}
 	
 	//post - 하자목록 등록하기
 	@PostMapping("/defects")

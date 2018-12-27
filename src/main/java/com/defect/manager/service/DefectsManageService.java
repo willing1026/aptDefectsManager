@@ -23,9 +23,10 @@ public class DefectsManageService {
 		return defectsRepository.findAll();
 	}
 	
-	public Defects getDefectsByNo(Long no) {
-		return defectsRepository.findByNo(no);
-	}
+//	@Transactional(readOnly=true) //안써도 됨
+//	public Defects getDefectsByNo(Long no) {
+//		return defectsRepository.findByNo(no);
+//	}
 	
 	//post
 	@Transactional
