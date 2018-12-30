@@ -77,7 +77,6 @@ public class Defects extends BaseTimeEntity {
 	public void fixDefects(String roomType, String content) {
 		this.roomType = roomType;
 		this.content = content;
-		this.updateLastModifiedDate();
 	}
 	
 }

@@ -7,7 +7,7 @@ let main = {
             _this.save();
         });
         
-        $("button[name=btn-defects-update]").on('click', function(event) {
+        $('.btn-update').on('click', function(event) {
             _this.updateModal(event);
         });
         

@@ -36,10 +36,10 @@
                         <td th:text="${defects.createdDate}"></td>
                         <td th:text="${defects.modifiedDate}"></td>
                         <td>
-                            <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#updateDefectsModal" name="btn-defects-update">수정하기</button>
+                            <button class="btn btn-secondary btn-update" type="button" data-toggle="modal" data-target="#updateDefectsModal">수정</button>
                         </td>
                         <td>
-                            <button class="btn btn-secondary btn-delete" type="button" data-toggle="modal" data-target="#deleteDefectsModal">삭제</button>
+                            <button class="btn btn-secondary btn-delete" type="button">삭제</button>
                         </td>
                     </tr>
                 </tbody>
@@ -47,13 +47,7 @@
         </div>
         <!-- =============================================================== -->
         
-        
-        <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#updateDefectsModal" id="btn-defects-update2" th:value="${defectsList.get(3).no}">수정하기</button>
-        
-        <input type="text" th:value="${defectsList.get(3).no}">
-        
-        
-        <!-- SECTION : MODAL  ============================================== -->
+        <!-- SECTION : save Modal  ============================================== -->
         <div class="modal fade" id="saveDefectsModal" tabindex="-1" role="dialog" aria-labelledby="saveDefectsLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -91,7 +85,6 @@
 
         
         <!-- SECTION : update Modal   ============================================== -->
-        
         <div class="modal fade" id="updateDefectsModal" tabindex="-1" role="dialog" aria-labelledby="updateDefectsLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
