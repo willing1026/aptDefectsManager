@@ -18,7 +18,7 @@ let main = {
         
         $('.btn-delete').on('click', function() {
             _this.delete(event);
-        })
+        });
         
         /*내용 수정 modal창*/
         /*$('#updateDefectsModal').on('show.bs.modal', function(event) {
