@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 import com.defect.manager.domain.entity.Defects;
+import com.defect.manager.domain.entity.User;
 
 import lombok.Getter;
 
@@ -13,21 +14,20 @@ public class DefectsResponseDto {
 
 	private Long no;
 	
-	private String userId;
-	private String aptCd;
 	private String roomType;
 	private String content;
 	
 	private String createdDate;
 	private String modifiedDate;
 	
+	private User user;
+	
 	
 	public DefectsResponseDto(Defects entity) {
 		this.no = entity.getNo();
-		this.userId = entity.getUserId();
-		this.aptCd = entity.getAptCd();
 		this.roomType = entity.getRoomType();
 		this.content = entity.getContent();
+		this.user = entity.getUser();
 		this.createdDate = toStringDateTime(entity.getCreatedDate());
 		this.modifiedDate = toStringDateTime(entity.getModifiedDate());
 	}

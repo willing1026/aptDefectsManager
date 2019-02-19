@@ -2,9 +2,11 @@ package com.defect.manager.domain.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -52,25 +54,21 @@ public class Defects extends BaseTimeEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long no;
-	
-	@Column(nullable=false)
-	private String userId;
-	
-	@Column(nullable=false)
-	private String aptCd;
-	
+
 	@Column(nullable=false)
 	private String roomType;
 	
 	@Column(length=1000, nullable=false)
 	private String content;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	private User user;
 
 	@Builder
-	public Defects(String userId, String aptCd, String roomType, String content) {
-		this.userId = userId;
-		this.aptCd = aptCd;
+	public Defects(String roomType, String content, User user) {
 		this.roomType = roomType;
 		this.content = content;
+		this.user = user;
 	}
 	
 	//게시글 내용수정

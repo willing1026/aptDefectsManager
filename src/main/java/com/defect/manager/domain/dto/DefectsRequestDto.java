@@ -11,25 +11,19 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 public class DefectsRequestDto {
-
-	private String userId;
-	private String aptCd;
+	
 	private String roomType;
 	private String content;
 	
 	public Defects toEntity() {
 		return Defects.builder()
-					.userId(userId)
-					.aptCd(aptCd)
 					.roomType(roomType)
 					.content(content)
 					.build();
 	}
 	
 	@Builder
-	public DefectsRequestDto(String userId, String aptCd, String roomType, String content) {
-		this.userId = userId;
-		this.aptCd = aptCd;
+	public DefectsRequestDto(String roomType, String content) {
 		this.roomType = roomType;
 		this.content = content;
 	}

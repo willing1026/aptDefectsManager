@@ -1,11 +1,16 @@
 package com.defect.manager.controller;
 
+import java.io.File;
+import java.util.Iterator;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.defect.manager.domain.dto.DefectsRequestDto;
 import com.defect.manager.service.DefectsManageService;
@@ -36,15 +41,6 @@ DELETE /members/1
 public class DefectsManagerRestController {
 	
 	private DefectsManageService defectsManageService;
-//
-//get - 하자목록 1건 불러오기 // 사용할 필요 없어짐
-//	@GetMapping("/defects/{no}")
-//	public @ResponseBody Defects getDefectsList(@PathVariable Long no) {
-//		/**
-//		 * JSON객체로 return하기  : https://blog.hanumoka.net/2018/04/29/spring-20180429-spring-controller-return-json/
-//		 */
-//		return defectsManageService.getDefectsByNo(no);
-//	}
 	
 	//post - 하자목록 등록하기
 	@PostMapping("/defects")

@@ -4,7 +4,7 @@ let main = {
         
         /*내용등록 modal 창*/
         $('#btn-defects-save').on('click', function() {
-            _this.save();
+            _this.save(event);
         });
         
         $('.btn-update').on('click', function(event) {
@@ -26,30 +26,58 @@ let main = {
         });*/
     },
     
-    save: function() {
-        let saveData= {
-            aptCd: $('#aptCd').val(),
-            roomType: $('#roomType').val(),
-            content: $('#content').val(),
-            userId: 'abc@gmail.com'
-        };
+    save: function(event) {
+            
+        let button = $(event.target);
+        let idx = button.parent().parent().index();
+        let frm = $('#saveForm');
+        frm.method='POST';
+        frm.enctype='multipart/form-data';
+        
+        let fileData = new FormData(frm);
         
         $.ajax({
             url: '/defects',
             type: 'POST',
-            dataType: 'json',
-            contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(saveData),
+            data: fileData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
             success: function() {
-                alert('등록완료');
-                location.reload();
+                alert('성공');
             },
-            error: function(e) {
-                alert('등록오류');
+            error: function() {
+                alert('실패');
             }
         }).always(function() {
             location.reload();
         });
+        
+        
+//        let saveData= {
+//            aptCd: $('#aptCd').val(),
+//            roomType: $('#roomType').val(),
+//            content: $('#content').val(),
+//            userId: 'abc@gmail.com'
+//        };
+//        
+//        $.ajax({
+//            url: '/defects',
+//            type: 'POST',
+//            dataType: 'json',
+//            contentType: 'application/json; charset=utf-8',
+//            data: JSON.stringify(saveData),
+//            success: function() {
+//                alert('등록완료');
+//                location.reload();
+//            },
+//            error: function(e) {
+//                alert('등록오류');
+//            }
+//        }).always(function() {
+//            location.reload();
+//        });
     },
     
     updateModal: function(event) {
